@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zubair — Portfolio</title>
+  <style>
+    :root{
+      --brand:#16a34a;--ink:#1d1d1f;--muted:#6e6e73;--card:#fff;--shadow:0 10px 25px rgba(0,0,0,.08);--nav-h:70px;
+    }
+    html{scroll-behavior:smooth; scroll-padding-top: var(--nav-h);}
+    body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,#f0fdf4,#e0f7ff);} /* gradient background */
+
+    /* ===== Decorative Background Shapes ===== */
+    body::before, body::after {
+      content:"";
+      position:fixed;
+      border-radius:50%;
+      background:rgba(22,163,74,0.1);
+      z-index:-1;
+    }
+    body::before {
+      width:400px; height:400px;
+      top:-100px; left:-100px;
+    }
+    body::after {
+      width:500px; height:500px;
+      bottom:-150px; right:-150px;
+      background:rgba(0,200,255,0.1);
+    }
+
+    /* ===== Layout ===== */
+    header{background:linear-gradient(120deg,#16a34a,#0ea5e9);color:#fff;padding:40px 20px 80px;text-align:center;position:relative;overflow:hidden;} /* reduced header size */
+    header h1{margin:0;font-size:clamp(24px,3vw,36px);position:relative;z-index:1}
+    header p{margin:8px 0 0;font-size:16px;color:#e0f2f1;z-index:1;position:relative}
+    header img{margin-top:20px;width:160px;height:160px;object-fit:cover;object-position:top;border-radius:50%;border:5px solid #fff;box-shadow:var(--shadow);position:relative;z-index:1}
+
+    nav{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;justify-content:center;gap:24px;padding:12px}
+    nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 10px;border-radius:6px;transition:background .2s}
+    nav a:hover{background:rgba(22,163,74,.1)}
+
+    section{max-width:1100px;margin:60px auto;padding:0 20px;animation:fadeIn 1s ease-in}
+    .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:32px;margin:30px 0;position:relative;transition:transform .3s,box-shadow .3s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.12)}
+    .card h2{margin:0 0 14px;font-size:26px;color:var(--brand)}
+    ul{list-style:none;padding:0;margin:0}
+    li{margin:10px 0;padding-left:20px;position:relative}
+    li::before{content:"▹";color:var(--brand);position:absolute;left:0}
+
+    footer{text-align:center;padding:40px 20px;color:var(--muted);background:#fafafa;margin-top:60px}
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    /* ===== Download CV Button ===== */
+    .download-btn {
+      padding:8px 18px;
+      background:#007bff;
+      color:#fff !important;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:600;
+      box-shadow:var(--shadow);
+      transition:background 0.3s, transform 0.2s;
+    }
+    .download-btn:hover {
+      background:#0056b3;
+      transform:scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Basheer Ahamed Zubair V A</h1>
+    <p>Cloud & DevOps Enthusiast · IT Professional · Dubai, UAE</p>
+    <img src="PHOTO.jpg" alt="Zubair"/>
+  </header>
+
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+    <!-- ✅ Styled Download CV Button inside Navbar -->
+    <a href="Zubair_CV.pdf" download class="download-btn">Download CV</a>
+  </nav>
+
+  <section id="summary">
+    <div class="card">
+      <h2>Professional Summary</h2>
+      <p>Detail-oriented and technically skilled professional with dual experience in IT and financial services. Worked as a Document Specialist for Boston Consulting Group (BCG) via RR Donnelley and as a Teller at WallStreet Exchange in the UAE. Skilled in creating professional presentations, customer service, and compliance (KYC/Risk). Proficient in AWS Cloud, DevOps tools, and Microsoft Office. Strong understanding of IT infrastructure and cloud automation with hands-on project experience.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Cloud Technologies:</strong> AWS (EC2, S3, IAM, CodeDeploy)</li>
+        <li><strong>DevOps Tools:</strong> Git, Jenkins, Ansible, Terraform, Kubernetes, API Integration</li>
+        <li><strong>Monitoring Tools:</strong> Prometheus, Grafana</li>
+        <li><strong>Financial Systems:</strong> Compliance, KYC, Risk Categorization, Payment Gateways</li>
+        <li><strong>Productivity:</strong> Microsoft PowerPoint, Excel, Word, SQL, Dot Net</li>
+        <li><strong>Soft Skills:</strong> Communication, Documentation, Teamwork, Time Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="card">
+      <h2>Professional Experience</h2>
+      <h3>WallStreet Exchange, UAE — Supervisor / Customer Service Executive</h3>
+      <p><em>Nov 2024 – Present</em></p>
+      <ul>
+	<li>Acted as Branch In-Charge during the absence of the Branch Manager and Assistant Manager, overseeing day-to-day branch operations and ensuring uninterrupted service delivery.</li>
+        <li>Supervised front-office staff, allocated duties, and ensured adherence to operational and compliance standards.</li>
+        <li>Managed daily customer financial transactions with high accuracy and professionalism.</li>
+        <li>Conducted entry-level KYC verification and supported customer onboarding in compliance with UAE AML regulations.</li>
+        <li>Monitored transactions and escalated suspicious activities in line with risk and compliance protocols.</li>
+        <li>Resolved customer issues efficiently while maintaining service quality and regulatory compliance.</li>
+	<li>Delivered consistent customer service to a diverse, multinational client base.</li>
+      </ul>
+      <h3>RR Donnelley — Client: Boston Consulting Group (BCG) — Document Specialist</h3>
+      <p><em>Feb 2024 – Aug 2024</em></p>
+      <ul>
+        <li>Created and formatted high-end PowerPoint presentations for BCG consultants.</li>
+        <li>Ensured design consistency and brand adherence in all decks.</li>
+        <li>Managed quick turnaround requests with accuracy and visual clarity.</li>
+        <li>Collaborated with remote teams to deliver time-critical documents.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>B.Tech in Information Technology</strong><br/>Aalim Muhammed Salegh College of Engineering, Chennai, India | CGPA: 7.73 | 2023</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="card">
+      <h2>Certifications & Training</h2>
+      <ul>
+        <li>IoT Training Program — Mahindra Pride Classroom</li>
+        <li>Soft Skills Training Program — Platinum Grade (90.00%)</li>
+        <li>Oracle Aconex Certifications — In Progress</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects & Hands-On Experience</h2>
+      <ul>
+        <li><strong>AWS Cloud Automation:</strong> Built CI/CD pipelines using CodeDeploy, EC2, S3, SNS, and monitored via CloudWatch.</li>
+        <li><strong>DevOps Infrastructure Setup:</strong> Provisioned resources with Terraform and Ansible, deployed containerized apps on Kubernetes, monitored with Prometheus + Grafana, and created Jenkins pipelines integrated with GitHub.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Processed 100+ customer transactions daily with 100% accuracy.</li>
+        <li>Improved turnaround time for BCG documents by 20%.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:zubair3907@gmail.com">zubair3907@gmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/zubair04" target="_blank">linkedin.com/in/zubair04</a></li>
+        <li><strong>Mobile (UAE):</strong> +971 50 357 0939</li>
+        <li><strong>Mobile (India):</strong> +91 72991 67449</li>
+        <li><strong>Location:</strong> Dubai, UAE</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Basheer Ahamed Zubair V A
+  </footer>
+</body>
+</html>
